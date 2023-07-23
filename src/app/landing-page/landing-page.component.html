@@ -1,0 +1,41 @@
+<app-header>
+
+</app-header>
+
+<div class="container mt-4">
+    <div class="row align-items-center">
+        <div class="col-lg-4">
+            <img class="img-fluid" src="https://gifcop.com/wp-content/uploads/Barrons-Money-2_4_ANI_2_2.gif"
+                alt="loading">
+        </div>
+        <div class="col-lg-2"></div>
+        <div class="col-lg-6 mt-5 ">
+            <h1>Welcome to <span class="text-success">Samayam Bank</span></h1>
+
+            <p class="mt-3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam distinctio animi ex fugit
+                quod
+                consectetur! Architecto quibusdam vel nemo, voluptatem perferendis, eos iure vitae reprehenderit sequi
+                praesentium, quia recusandae facilis.
+            </p>
+            <div class="collapse" id="collapseExample">
+                <p class="mt-3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam distinctio animi ex
+                    fugit
+                    quod
+                    consectetur! Architecto quibusdam vel nemo, voluptatem perferendis, eos iure vitae reprehenderit
+                    sequi
+                    praesentium, quia recusandae facilis.
+                </p>
+            </div>
+            <!-- button -->
+            <button (click)="toggle()" class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample"
+                aria-expanded="false" aria-controls="collapseExample">
+                Read <span *ngIf="readMore">More</span> <span *ngIf="!readMore">Less</span>
+            </button>
+
+        </div>
+    </div>
+</div>
+
+<app-footer>
+
+</app-footer>

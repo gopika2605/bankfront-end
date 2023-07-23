@@ -1,0 +1,59 @@
+<app-header></app-header>
+
+<div class="container mt-5 ">
+    <h1>Samayam Bank</h1>
+    <p class="mt-3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam distinctio animi ex fugit
+        quodconsectetur! Architecto quibusdam vel nemo, voluptatem perferendis, eos iure vitae reprehenderit sequi
+        praesentium, quia recusandae facilis.Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam distinctio animi ex fugit
+        quod consectetur! Architecto quibusdam vel nemo, voluptatem perferendis, eos iure vitae reprehenderit sequi
+        praesentium, quia recusandae facilis.Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam distinctio animi ex fugit
+        quod consectetur! Architecto quibusdam vel nemo, voluptatem perferendis, eos iure vitae reprehenderit sequi
+        praesentium, quia recusandae facilis.
+    </p>
+    <div class="row mt-5 align-items-center">
+        <div class="col-lg-4">
+            <img class="img-fluid" src="https://media.tenor.com/p0G_bmA2vSYAAAAd/login.gif" alt="loading">
+
+        </div>
+        <div class="col-lg-2">
+            
+        </div>
+        <div class="col-lg-6">
+            <form [formGroup]="loginForm" (ngSubmit)="login()">
+                <h3>Sign In......</h3>
+                <div class="mb-3">
+                  
+                  <input name="acno" formControlName="acno" type="email" class="form-control" id="exampleInputEmail5" aria-describedby="emailHelp"placeholder="Account Number">
+                  
+                </div>
+                <div *ngIf="this.loginForm.get('acno')?.touched && this.loginForm.get('acno')?.errors" class="mb-3 text-danger">
+                    *Invalid Account Number
+
+                  </div>
+                <div class="mb-3">
+                  
+                  <input name="pswd" formControlName="pswd" type="password" class="form-control" id="exampleInputPassword3" placeholder="Password">
+                </div>
+                <div *ngIf="this.loginForm.get('pswd')?.touched && this.loginForm.get('pswd')?.errors" class="mb-3 text-danger">
+                    *Invalid Password
+
+                  </div>
+                
+                <button type="submit" class="btn btn-primary">Login
+                  <div *ngIf="this.isLogined" class="spinner-border text-light ms-2" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                  </div>
+                </button> Are you a new User? Click here to <a routerLink="/user/register">Register</a>
+
+
+              </form>
+            
+        </div>
+
+    </div>
+</div>
+<footer class="text-center m-5 bg-dark text-light  ">
+    
+    <p>&copy; All Rights Reserved &reg; <i class="fa-solid fa-building-columns fa-beat"></i> Samayam Bank</p>
+    <br>
+</footer>
